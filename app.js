@@ -1,10 +1,13 @@
 'use strict';
 
 function createGreeting (name, age){
-  const yearOfBirth = 2019 - Number(age);
-  console.log(yearOfBirth);
-  return `My name is ${name} and I am ${age} years old. I was born in ${yearOfBirth}`;
   
+  return `My name is ${name} and I am ${age} years old. I was born in ${getYearOfBirth(age)}`;
+  
+}
+
+function getYearOfBirth(age){
+  return (2019 - Number(age));
 }
 
 const returnedGreeting= createGreeting('Kristof', '28');
